@@ -16,7 +16,7 @@ from envs_robot.register import register_custom_envs
 
 
 parser = argparse.ArgumentParser(description='PyTorch Soft Actor-Critic Args')
-parser.add_argument('--env-name', default="FetchPush_test",
+parser.add_argument('--env_name', default="FetchPickAndPlace_test",
                     help='Mujoco Gym environment (default: HalfCheetah-v2)')
 parser.add_argument('--policy', default="Gaussian",
                     help='Policy Type: Gaussian | Deterministic (default: Gaussian)')
@@ -62,7 +62,7 @@ args = parser.parse_args()
 
 # Environment
 register_custom_envs()
-env = gym.make('FetchPush_test', render_mode="rgb_array") #rgb_array
+env = gym.make(args.env_name, render_mode="rgb_array") #rgb_array
 
 # Device
 device = torch.device("cuda" if args.cuda else "cpu")

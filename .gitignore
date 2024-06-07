@@ -2,5 +2,13 @@
 /metra/runs/
 /metra/video/
 
+/c-learning/checkpoints/
+/c-learning/runs/
+/c-learning/video/
+
+/her/checkpoints/
+/her/runs/
+/her/video/
+
 /runs/
 /video/
